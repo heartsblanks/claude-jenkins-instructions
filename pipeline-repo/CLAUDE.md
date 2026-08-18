@@ -301,45 +301,41 @@ Treat unrelated modifications as user-owned.
 
 ## Output and Commentary
 
-Keep commentary minimal.
+Default to no commentary during routine implementation.
 
-Do not narrate routine actions such as:
+Do not narrate:
 
-- searching
-- opening files
-- reading code
-- running normal commands
-- checking references
-- making straightforward edits
+- searches
+- file reads
+- repository exploration
+- successful commands
+- reference checks
+- straightforward edits
+- routine validation
 
-Do not provide step-by-step reasoning.
+Do not provide:
+- progress updates
+- step-by-step reasoning
+- repeated summaries
+- statements of intent such as "I will now..." or "Next I will..."
+- commentary merely confirming that a normal action succeeded
 
-Do not repeatedly announce what you are about to do.
+Prefer silent tool execution.
 
-Prefer tool actions over commentary.
+Commentary is permitted only when:
+- clarification from the user is required
+- a material ambiguity could change the implementation
+- a blocker prevents progress
+- a requested operation carries meaningful risk
+- an unexpected result requires changing the approach
 
-Provide commentary only when:
-
-- clarification is required
-- an important ambiguity exists
-- a blocker occurs
-- an operation has meaningful risk
-- an unexpected result materially changes the implementation
-
-If an operation succeeds and needs no explanation, continue without commentary.
-
-Do not repeat established information.
-
-Do not explain unchanged code.
-
-Do not provide unrelated recommendations.
+When commentary is necessary, keep it to the minimum needed to continue safely.
 
 ## Final Response
 
 Keep the final response concise.
 
 Include only:
-
 - what changed
 - files changed
 - validation performed
@@ -348,13 +344,15 @@ Include only:
 For small changes, use no more than 3–5 bullets.
 
 Do not include:
-
-- detailed walkthroughs
 - step-by-step reasoning
+- implementation narration
 - repository summaries
+- repeated explanations
 - large code excerpts already visible in the diff
-- unrelated improvement suggestions
-- repeated summaries
+- unrelated recommendations
+- optional next steps unless requested
+
+If the task is complete and validated, report completion briefly and stop.
 
 ## Stop Condition
 
