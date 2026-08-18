@@ -1,10 +1,4 @@
----
 
-# Pipeline repository
-
-## 2. `pipeline-repo/CLAUDE.md`
-
-```markdown
 # Jenkins Pipeline Repository Instructions
 
 ## Repository Purpose
