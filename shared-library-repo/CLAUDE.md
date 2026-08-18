@@ -271,42 +271,58 @@ Preserve unrelated existing changes.
 
 ## Output and Commentary
 
-Keep commentary minimal.
+Default to no commentary during routine implementation.
 
-Do not narrate routine repository exploration.
+Do not narrate:
 
-Do not provide step-by-step reasoning.
+- searches
+- file reads
+- repository exploration
+- successful commands
+- reference checks
+- straightforward edits
+- routine validation
 
-Do not repeatedly announce what you are about to do.
+Do not provide:
+- progress updates
+- step-by-step reasoning
+- repeated summaries
+- statements of intent such as "I will now..." or "Next I will..."
+- commentary merely confirming that a normal action succeeded
 
-Prefer tool actions over commentary.
+Prefer silent tool execution.
 
-Provide commentary only for:
+Commentary is permitted only when:
+- clarification from the user is required
+- a material ambiguity could change the implementation
+- a blocker prevents progress
+- a requested operation carries meaningful risk
+- an unexpected result requires changing the approach
 
-- clarification
-- compatibility concerns
-- blockers
-- meaningful risk
-- unexpected findings that materially change implementation
-
-Do not repeatedly summarize the same change.
+When commentary is necessary, keep it to the minimum needed to continue safely.
 
 ## Final Response
 
 Keep the final response concise.
 
 Include only:
-
 - what changed
-- affected public API, if any
 - files changed
 - validation performed
-- compatibility risk or assumption, if any
+- unresolved issue or assumption, if any
 
 For small changes, use no more than 3–5 bullets.
 
-Do not include detailed walkthroughs or unrelated recommendations.
+Do not include:
+- step-by-step reasoning
+- implementation narration
+- repository summaries
+- repeated explanations
+- large code excerpts already visible in the diff
+- unrelated recommendations
+- optional next steps unless requested
 
+If the task is complete and validated, report completion briefly and stop.
 ## Stop Condition
 
 Stop when:
